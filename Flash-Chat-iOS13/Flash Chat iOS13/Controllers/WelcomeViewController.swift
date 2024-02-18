@@ -6,8 +6,17 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: CLTypingLabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
 //        titleLabel.text = ""
@@ -27,6 +36,21 @@ class WelcomeViewController: UIViewController {
 //        
 //        print(titleLabel.text!)
         
+        if #available(iOS 13.0, *) {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = UIColor(named: Constants.BrandColors.blue)
+
+                navigationController?.navigationBar.standardAppearance = appearance
+                navigationController?.navigationBar.scrollEdgeAppearance = appearance
+                //navigationController?.navigationBar.compactAppearance = appearance
+                
+            } else {
+                // Fallback on earlier versions
+                navigationController?.navigationBar.barTintColor = UIColor(named: Constants.BrandColors.blue)
+            }
+        
+        navigationController?.navigationBar.barTintColor = UIColor(named: Constants.BrandColors.blue)
         titleLabel.text = Constants.appName
        
     }
