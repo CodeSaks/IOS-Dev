@@ -1,4 +1,3 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
 
 # Flash-Chat
 
@@ -25,28 +24,5 @@ Flash Chat is an internet based messaging app similar to WhatsApp, the popular m
 * How to create direct Segues for navigation.
 
 
-# Constants
-```
-struct K {
-    static let cellIdentifier = "ReusableCell"
-    static let cellNibName = "MessageCell"
-    static let registerSegue = "RegisterToChat"
-    static let loginSegue = "LoginToChat"
-    
-    struct BrandColors {
-        static let purple = "BrandPurple"
-        static let lightPurple = "BrandLightPurple"
-        static let blue = "BrandBlue"
-        static let lighBlue = "BrandLightBlue"
-    }
-    
-    struct FStore {
-        static let collectionName = "messages"
-        static let senderField = "sender"
-        static let bodyField = "body"
-        static let dateField = "date"
-    }
-}
 
-```
 

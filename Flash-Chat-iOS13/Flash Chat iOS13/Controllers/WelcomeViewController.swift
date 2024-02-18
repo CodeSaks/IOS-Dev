@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
 //        
 //        print(titleLabel.text!)
         
-        titleLabel.text = "⚡️FlashChat"
+        titleLabel.text = Constants.appName
        
     }
     
